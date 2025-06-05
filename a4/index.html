@@ -8,29 +8,36 @@
 <body>
     <h1>Assignment 4</h1>
     <script>
-        function greet() {
-            alert(txtName.value + txtName2.value);
+        function add(a,b){
+            return a + b;
+        }
+        function sub(a,b){
+            return a - b;
+        }
+        function multi(a,b){
+            return a * b;
+        }
+        function div(a,b){
+            return a / b;
         }
 
         function calc(){
-            let a = Number(t1.value);
-            let b = Number(t2.value);
-            //alert(a+b);
-            dvResult.innerHTML = a + b;
+            a = parseFloat(document.getElementById('a').value);
+            b = parseFloat(document.getElementById('b').value);
+
+            result = `
+                <p>Addition: ${add(a, b)}</p>
+                <p>Subtraction: ${sub(a, b)}</p>
+                <p>Multiplication: ${multi(a, b)}</p>
+                <p>Division: ${div(a, b)}</p>
+            `;
+            document.write(result);
         }
+
     </script>
-    <br>
 
-    <input type="text" id="txtName">
-    <input type="text" id="txtName2">
-    <button onclick="greet()" style="background-color: yellow;">Click</button>
-
-    <br>
-
-    <input type="text" id="t1">
-    <input type="text" id="t2">
-    <button onclick="calc()" style="background-color: green;">Click</button>
-
-    <div id="dvResult"></div>
+    <input type="text" id="a" placeholder="Number 1">
+    <input type="text" id="b" placeholder="Number 2">
+    <button onclick="calc()" style="background-color: lime;">Click</button>
 </body>
 </html>
