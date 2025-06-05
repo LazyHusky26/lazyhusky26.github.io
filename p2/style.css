@@ -7,3 +7,9 @@
     background-color: yellowgreen;
     text-align: center;
 }
+
+button{
+    background-color: yellow;
+    font-weight: bold;
+    width: 150px;
+}
