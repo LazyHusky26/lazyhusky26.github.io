@@ -18,7 +18,7 @@ const showRegister = () => {
     <p><input type="text" id="txtName"></p>
      <p><input type="text" id="txtEmail"></p>
     <p><input type="password" id="txtPass"></p>
-    <button>Register</button>
+    <button onclick='showLogin()'>Register</button>
     <p><button onclick='showLogin()'>Already have Account</button></p>
     </div>
     `
