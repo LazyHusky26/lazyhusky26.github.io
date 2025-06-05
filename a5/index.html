@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 5</h1>
+    <script>
+        function enter(){
+            name = document.getElementById("name").value;
+            email = document.getElementById("email").value;
+            pass = document.getElementById("pass").value;
+
+            document.write("Name: " + name + "<br>");
+            document.write("Email: " + email + "<br>");
+            document.write("Password: " + pass + "<br>");
+        }
+    </script>
+
+    <input type="text" id="name" placeholder="Name"><br>
+    <input type="text" id="email" placeholder="Email"> <br>
+    <input type="text" id="pass" placeholder="Password"><br>
+    <button onclick="enter()" style="background-color: aqua;">Submit</button>
+</body>
+</html>
