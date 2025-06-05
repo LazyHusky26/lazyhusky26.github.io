@@ -22,16 +22,13 @@
         }
 
         function calc(){
-            a = parseFloat(document.getElementById('a').value);
-            b = parseFloat(document.getElementById('b').value);
+            a = Number(document.getElementById('a').value);
+            b = Number(document.getElementById('b').value);
 
-            result = `
-                <p>Addition: ${add(a, b)}</p>
-                <p>Subtraction: ${sub(a, b)}</p>
-                <p>Multiplication: ${multi(a, b)}</p>
-                <p>Division: ${div(a, b)}</p>
-            `;
-            document.write(result);
+            document.write("Addition: " + add(a,b) + "<br>");
+            document.write("Subtraction: " + sub(a,b) + "<br>");
+            document.write("Multiplication: " + multi(a,b) + "<br>");
+            document.write("Divide: " + div(a,b) + "<br>");
         }
 
     </script>
