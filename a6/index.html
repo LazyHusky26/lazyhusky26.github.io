@@ -11,18 +11,38 @@
     <h2>Fruit List</h2>
     <input type="text" id="fruit" placeholder="Fruit Name">
     <button onclick="addFruit()">Add</button>
+    <button onclick="searchFruit()">Search</button>
     <script>
         const fruits = [];
-        const addFruit = () => {
-            x = document.getElementById("fruit").value;
-            fruits.push(x);
 
+        const dispFruit = () => {
             let output="";
-            fruits.forEach((fruit) => {
-                output += fruit + "<br>";
+            fruits.forEach((fruit,index) => {
+                output += `${fruit} <button onclick="removeFruit(${index})">Remove</button><br>`;
             });
 
             document.getElementById("output").innerHTML = output;
+        }
+
+        const addFruit = () => {
+            x = document.getElementById("fruit").value;
+            fruits.push(x);
+            dispFruit()
+        }
+
+        const removeFruit = (index) => {
+            const newFruits = fruits.filter((x, e) => e !== index);
+            fruits.length=0;
+            fruits.push(...newFruits);
+            dispFruit();
+        }
+
+        const searchFruit = () => {
+            x = document.getElementById("fruit").value;
+            const newFruits = fruits.filter((item) => item==x);
+            fruits.length=0;
+            fruits.push(...newFruits);
+            dispFruit();
         }
         
     </script>
