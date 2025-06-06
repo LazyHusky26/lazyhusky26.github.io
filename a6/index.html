@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 6</h1>
+
+    <h2>Fruit List</h2>
+    <input type="text" id="fruit" placeholder="Fruit Name">
+    <button onclick="addFruit()">Add</button>
+    <script>
+        const fruits = [];
+        const addFruit = () => {
+            x = document.getElementById("fruit").value;
+            fruits.push(x);
+
+            let output="";
+            fruits.forEach((fruit) => {
+                output += fruit + "<br>";
+            });
+
+            document.getElementById("output").innerHTML = output;
+        }
+        
+    </script>
+
+    <div id="output" style="margin-top:20px; font-weight: bold;"></div>
+</body>
+</html>

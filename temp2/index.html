@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // x=10
+        // console.log(x)
+        // var x
+
+        // f1();
+        // function f1(){
+        //     console.log("f1 function");
+        // }
+
+        // const f1 = () => {
+        //     console.log("f1 function");
+        // };
+        // f1();
+
+        const fruits = ["apple","mango","orange"]
+        console.log(fruits[0]);
+
+        // fruits.push("banana")
+        // console.log(fruits)
+
+        // fruits.pop()
+        // console.log(fruits)
+        // console.log(fruits.length)
+
+        // for(let i=0;i<fruits.length;i++){
+        //     console.log(fruits[i])
+        // }
+
+        // fruits.forEach((fruit) => console.log(fruit));
+
+        // const newArr = fruits.map((value) => value);
+        // console.log(newArr)
+
+        // const newArr = fruits.map((fruit) => {
+        //     return fruit;
+        // });
+        // console.log(newArr);
+
+        // const newArr = fruits.filter((fruit) => fruit=="apple");
+        // console.log(newArr)
+
+        const score = [4,2,1,6,7];
+
+        // score.map((scr) => {
+        //     console.log("ID "+scr);
+        // })
+
+        // const newArr = score.map((scr) => "ID "+scr);
+        // console.log(newArr);
+
+        // const newArr = score.find((e) => e>2);
+        // console.log(newArr);
+
+        // const newArr = score.filter((e) => e>2);
+        // console.log(newArr);
+
+        // const newArr = score.reduce((sum, e) => sum + e);
+        // console.log(newArr);
+
+        const add = (...args) => {
+            const total = args.reduce((sum,e) => sum+e);
+            return total;
+        }
+
+        const result = add(4,6,7,9,3)
+    </script>
+</body>
+</html>
