@@ -40,9 +40,13 @@
         const searchFruit = () => {
             x = document.getElementById("fruit").value;
             const newFruits = fruits.filter((item) => item==x);
-            fruits.length=0;
-            fruits.push(...newFruits);
-            dispFruit();
+
+            let output="";
+            newFruits.forEach((fruit,index) => {
+                output += `${fruit} <button onclick="removeFruit(${index})">Remove</button><br>`;
+            });
+
+            document.getElementById("output").innerHTML = output;
         }
         
     </script>
