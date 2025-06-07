@@ -8,6 +8,11 @@
     text-align: center;
 }
 
+#dvMsg{
+    color: red;
+    font-weight: bold;
+}
+
 button{
     background-color: yellow;
     font-weight: bold;
